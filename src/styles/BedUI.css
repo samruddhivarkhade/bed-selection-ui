@@ -1,0 +1,210 @@
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #1f2933;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+/* Page subtitle (e.g. Single Bed) */
+.heading {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 48px; /* 👈 clear space before cards */
+}
+
+/* Main page title */
+.main-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1f2933;
+  margin-bottom: 12px;
+}
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift on hover */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.85);
+}
+
+/* =========================
+   CONTENT
+========================= */
+.card-content {
+  padding: 24px;
+}
+
+/* Card title */
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f97316;
+}
+
+/* Description text */
+.card-desc {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Specs list */
+.specs {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.spec-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.spec-label {
+  font-weight: 500;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  margin-top: 24px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f97316;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 0;
+
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 32px 16px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+}
+
+/* =========================
+   BED DETAILS PAGE
+========================= */
+
+/* Wrapper for detail cards */
+.detail-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+/* Bigger detail card */
+.detail-card {
+  max-width: 380px;
+}
+
+/* Bigger image on detail page */
+.detail-card img {
+  height: 260px;
+}
+
+/* Space between heading and cards on single bed page */
+.heading + .cards {
+  margin-top: 40px;
+}
