@@ -1,4 +1,4 @@
-// /data/beds.js
+
 
 export const beds = [
   {
@@ -85,3 +85,4 @@ export const beds = [
     ],
   },
 ];
+
