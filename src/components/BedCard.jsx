@@ -1,4 +1,4 @@
-// src/components/BedCard.jsx
+
 import Link from "next/link";
 
 export default function BedCard({ bed, isVariant }) {
@@ -27,8 +27,7 @@ export default function BedCard({ bed, isVariant }) {
             </div>
           </div>
         )}
-
-        {/* 👇 Link styled as button */}
+        
         <Link href={`/bed/${bed.id}`} className="btn">
           Select Bed
         </Link>
@@ -36,3 +35,4 @@ export default function BedCard({ bed, isVariant }) {
     </div>
   );
 }
+
