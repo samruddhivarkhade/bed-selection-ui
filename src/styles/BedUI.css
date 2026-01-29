@@ -28,7 +28,7 @@ body {
   font-size: 22px;
   font-weight: 500;
   color: #64748b;
-  margin-bottom: 48px; /* 👈 clear space before cards */
+  margin-bottom: 48px; 
 }
 
 /* Main page title */
@@ -59,7 +59,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Lift on hover */
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
@@ -98,7 +97,6 @@ body {
   color: #f97316;
 }
 
-/* Description text */
 .card-desc {
   margin-top: 8px;
   font-size: 14px;
@@ -185,7 +183,7 @@ body {
    BED DETAILS PAGE
 ========================= */
 
-/* Wrapper for detail cards */
+
 .detail-cards {
   display: flex;
   justify-content: center;
@@ -194,17 +192,18 @@ body {
   flex-wrap: wrap;
 }
 
-/* Bigger detail card */
+
 .detail-card {
   max-width: 380px;
 }
 
-/* Bigger image on detail page */
+
 .detail-card img {
   height: 260px;
 }
 
-/* Space between heading and cards on single bed page */
+
 .heading + .cards {
   margin-top: 40px;
+
 }
